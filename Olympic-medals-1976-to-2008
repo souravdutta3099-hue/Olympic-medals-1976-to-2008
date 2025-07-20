@@ -1,0 +1,62 @@
+Olympic-medals-1976-to-2008 
+📁 GitHub Projects Build
+Summer Olympics Analysis
+•	Focused precisely on 1976–2008 Olympic medal data using Power BI GitHub
+•	Includes slicers for year, visuals for medal count, medal by gender, pie charts, stacked columns by country, Tree maps, combo charts, and matrix-style athlete-medal tables.
+Olympics Analysis Dashboard
+•	Covers Olympics from 1900–2020 with Power BI GitHub+1Data Portfolio+1
+•	Offers trend analysis, country metrics, athlete filters, and matrix/table formats—great for your athlete medal list.
+Olympic Medals Dashboard  PowerBI
+•	A modern interface with deep gender, country, and athlete breakdowns GitHub
+•	Ideal structure for cards, pie, Tree maps (gold/bronze/silver + gender), and stacked visuals.
+120 years of olympics analysis using PowerBI
+•	Extensive timeline coverage with gender-distribution visuals Medium+5GitHub+5GitHub+5
+•	Useful for learning advanced DAX and modeling multi-year breakdowns.
+🧰 Step-by-Step Guide to Build & Publish
+1️⃣ Clone a starter repo
+Bash
+Copy Edit
+Git Clone https://github.com/Summer-Olympics-Analysis.git
+2️⃣ Understand the existing model
+•	Inspect Data Model: athlete, medal, country, year, sport tables.
+•	See how measures for total/silver/gold/bronze medals and gender splitting are constructed.
+3️⃣ Add or adjust visuals for your spec
+Requirement	Visual Type	Implementation Notes
+Total, Silver, Gold, Bronze medals	Card visuals	Use COUNTROWS with medal filters
+Year selection	Slicer	Date or numeric slicer
+Gender Tree map	Tree map	Group by field "Men/Women"
+Medal-type Tree map	Tree map	Group by "Gold/Silver/Bronze"
+Medal by Gender	Pie chart	Count of Medals by gender
+Top 5 Countries medal count	Stacked column chart	Filter top 5
+Top 5 Sports medal count	Clustered bar chart	Similar filter by sport
+Athlete–medal matrix	Matrix	Athletes VS medal types
+Top 5 Sports Tree map	Tree map	Same top-5 logic
+4️⃣ Create needed Measures
+Examples:
+DAX
+Copy Edit
+Total Medals = COUNT ROWS('Medal Table')
+Gold Medals = CALCULATE([Total Medals],Medal Table[Medal Type] = "Gold")
+Silver Medals =  ...
+Bronze Medals =      ...
+Medals By Gender = COUNT ROWS(...)
+And similar measures for top N and matrix.
+5️⃣ Add interactivity
+•	Ensure slicers (Year, Gender) cross-filter all visuals.
+•	Use bookmarks or page drill-through if needed.
+6️⃣ Polish & publish
+•	Theme: apply consistent colors matching Olympic gold/silver/bronze.
+•	Add titles and tooltips.
+•	Save .Pbix , export screenshot, write README.md.
+7️⃣ Upload to Git Hub
+Include PBIX, README (explaining visuals), dataset link , and screenshots.
+________________________________________
+📚 Learn from Others
+•	The Ultimate Olympic Games Dashboard DAX and SQL prep flows — great design & coding pattern guide  Portfolio+15GitHub+15gist.github.com+3GitHub+3GitHub+3GitHub+7GitHub+7GitHuGitHub.
+•	A recent LinkedIn share by demonstrates a visual dashboard for 1976–2008—great for design inspiration GitHub+2LinkedIn+2Reddit+2.
+________________________________________
+✅ Summary
+•	✅ Use repo as your foundation for 1976–2008 data.
+•	✅ Follow modular steps: clone → model → add visuals → enhance measures → polish.
+•	✅ Leverage other repos & dashboards to refine design, DAX, and UX.
+
